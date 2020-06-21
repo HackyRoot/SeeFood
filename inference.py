@@ -23,8 +23,5 @@ def get_prediction(img_path):
     result = json.loads(response.text)
     prediction = np.argmax(result['predictions'][0], axis=-1)
     class_name = CLASSES[prediction]
-    print(class_name)
-    
-
-get_prediction('hotdog.jpg')
-get_prediction('pizza.jpg')
+    # print(class_name)
+    return class_name
